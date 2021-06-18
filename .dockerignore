@@ -1,0 +1,6 @@
+.git
+.dockerignore
+.gitignore
+[Dd]ocker*
+node_modules
+*.sw?
