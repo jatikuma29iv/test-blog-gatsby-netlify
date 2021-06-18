@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66267bf8-3bcd-483c-b689-4e49498bd8cb/deploy-status)](https://app.netlify.com/sites/jovial-jackson-38d05e/deploys)
+
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
@@ -6,8 +8,6 @@
 <h1 align="center">
   Gatsby minimal starter
 </h1>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/66267bf8-3bcd-483c-b689-4e49498bd8cb/deploy-status)](https://app.netlify.com/sites/jovial-jackson-38d05e/deploys)
 
 ## 🚀 Quick start
 

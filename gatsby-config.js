@@ -13,7 +13,7 @@ module.exports = {
     //  },
     //},
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    //"gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
