@@ -1,35 +1,37 @@
 import * as React from "react"
-import PropTypes from 'prop-types'
 import Layout from '../components/layout'
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql } from 'gatsby'
+import IndexPageTempalte from '../templates/index-page'
+
 
 const IndexPage = ({data}) => {
-  const { title, content, subtitle } = data;
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
+  const { image, image_alt, title, subtitle } = frontmatter
 
-  return (
-    <section>
-      <StaticImage
-        alt='someday i will...'
-        src={content}
+  return(
+    <Layout>
+      <IndexPageTempalte
+        image={image}
+        image_alt={image_alt}
+        title={title}
+        subtitle={subtitle}
+        content={html}
       />
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-    </section>
+    </Layout>
   )
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+export default IndexPage
 
-const Index = () => {
-  const data={title: "jatin", content: 'images/autobahn.png', subtitle: "let see"}
-  
-  return (
-    <index>
-      <IndexPage data={data} />
-    </index>
-  )
-}
-
-export default Index
+export const pageQuery = graphql`
+  query {
+    markdownRemark {
+      html
+      frontmatter {
+        title
+        subtitle
+      }
+    }
+  }
+`

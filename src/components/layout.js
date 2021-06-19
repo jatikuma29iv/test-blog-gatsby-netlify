@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import { container, siteTitle } from './layout.module.scss'
+import { Link /*, useStaticQuery, graphql*/ } from 'gatsby'
+import { container /*, siteTitle*/ } from './layout.module.scss'
 
 
 class Layout extends React.Component {

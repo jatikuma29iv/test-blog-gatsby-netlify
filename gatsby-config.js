@@ -16,6 +16,12 @@ module.exports = {
     //"gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -29,7 +35,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: `${__dirname}/content/pages`,
       },
       __key: "pages",
     },
@@ -41,5 +47,6 @@ module.exports = {
       },
       __key: "blog",
     },
+    "gatsby-transformer-remark",
   ],
 };

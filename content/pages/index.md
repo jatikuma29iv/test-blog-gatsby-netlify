@@ -1,7 +1,8 @@
 ---
 title: "front xx title"
-content: 'images/autobahn.png'
 subtitle: "front xx subt"
+image: "/images/uploads/autobahn.png"
+image_alt: "my cool alt"
 ---
 
 # the Body

@@ -20,11 +20,12 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - file: "content/pages/index.md"
         label: "Index Page"
-        name: "index-page"
+        name: "index"
         fields:
+          - {label: Featured Image, name: image, widget: image}
+          - {label: Featured Image Alt, name: image_alt, widget: string}
           - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: content, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
+          - {label: Subtitle, name: subtitle, widget: string}
           - {label: Body, name: body, widget: markdown}
           - {label: Address, name: address, widget: text}
           - {label: Phone, name: phone, widget: string}
