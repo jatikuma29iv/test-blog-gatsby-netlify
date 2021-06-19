@@ -1,18 +1,35 @@
 import * as React from "react"
+import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 
-const IndexPage = () => {
-  return (
-    <Layout pageTitle='Welcome to Home page!'>
-      <p>lets try!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+const IndexPage = ({data}) => {
+  const { title, content, subtitle } = data;
 
+  return (
+    <section>
       <StaticImage
         alt='someday i will...'
-        src='../images/autobahn.png'
+        src={content}
       />
-    </Layout>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+    </section>
   )
 }
 
-export default IndexPage
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+const Index = () => {
+  const data={title: "jatin", content: 'images/autobahn.png', subtitle: "let see"}
+  
+  return (
+    <index>
+      <IndexPage data={data} />
+    </index>
+  )
+}
+
+export default Index
